@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -134,6 +135,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --font-sacramento: "Sacramento", "sans-serif";
+  --font-patrick-hand: "Patrick Hand", cursive;
 }
 
 @layer base {
@@ -141,6 +143,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-patrick-hand;
   }
+}
+
+@utility flip-img {
+  transform: scaleX(-1);
 }
