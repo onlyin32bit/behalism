@@ -6,8 +6,21 @@
 	import favicon from '$lib/assets/favicon.png';
 	import ArrowUp from '@lucide/svelte/icons/arrow-up';
 	import Facebook from '@lucide/svelte/icons/facebook';
-
+	import Mail from '@lucide/svelte/icons/mail';
 	let { children } = $props();
+
+	const contacts = [
+		{
+			icon: Facebook,
+			href: 'https://www.facebook.com/thebehalism',
+			label: 'Facebook'
+		},
+		{
+			icon: Mail,
+			href: 'mailto:thebehalismproject@gmail.com',
+			label: 'thebehalismproject@gmail.com'
+		}
+	]
 </script>
 
 <svelte:head>
@@ -23,15 +36,13 @@
 	<div class="flex px-16 py-8">
 		<div class="grow">
 			<img class="h-20" src={logo} alt="" />
-			<div>
-				<ul class="space-x-2">
-					<li class="group fill-muted transition-colors hover:text-white hover:underline">
-						<a href="https://www.facebook.com/thebehalism">
-							<Facebook class="mr-1 inline-block align-middle" />
-							<span class="text-lg">Facebook↗</span>
-						</a>
-					</li>
-				</ul>
+			<div class="flex items-center gap-8">
+				{#each contacts as contact}
+					<a href={contact.href} class="group fill-muted transition-colors hover:text-white hover:underline">
+						<contact.icon class="mr-1 inline-block align-middle" />
+						<span class="text-lg">{contact.label}↗</span>
+					</a>
+				{/each}
 			</div>
 		</div>
 		<Button
