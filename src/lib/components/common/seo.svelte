@@ -1,5 +1,4 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.png';
 	import { GetTitleSuffix } from '$lib/utils/seo';
 
 	type Props = {
@@ -25,6 +24,6 @@
 
 	<!-- <link rel="icon" href="/favicon.ico" sizes="any" /> -->
 	<!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml" /> -->
-	<link rel="icon" href={favicon} />
-	<!-- <link rel="apple-touch-icon" href="/favicon.png"> -->
+	<link rel="icon" href="/favicon.png" />
+	<link rel="apple-touch-icon" href="/favicon.png">
 </svelte:head>
