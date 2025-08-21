@@ -3,7 +3,7 @@
 	import cn_mel from '$lib/assets/cn-mel.png';
 	import logo from '$lib/assets/logo.svg';
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
 	import ArrowUp from '@lucide/svelte/icons/arrow-up';
 	import Facebook from '@lucide/svelte/icons/facebook';
 
