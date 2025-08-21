@@ -9,7 +9,7 @@
 	import cn_mel from '$lib/assets/cn-mel.png';
 	import sun from '$lib/assets/sun.svg';
 	import { onMount } from 'svelte';
-	import { gsap } from '$lib';
+	import gsap from 'gsap';
 	import { pb } from '$lib';
 	import { Button } from '$lib/components/ui/button';
 
