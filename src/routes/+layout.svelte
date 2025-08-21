@@ -5,6 +5,7 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import ArrowUp from '@lucide/svelte/icons/arrow-up';
+	import Facebook from '@lucide/svelte/icons/facebook';
 
 	let { children } = $props();
 </script>
@@ -17,11 +18,21 @@
 	{@render children()}
 </main>
 
-<footer class="relative bg-foreground text-white overflow-hidden mt-12">
+<footer class="relative mt-12 overflow-hidden bg-foreground text-background">
 	<h2 class="sr-only">Site-wide Links</h2>
 	<div class="flex px-16 py-8">
 		<div class="grow">
-			<img class="h-20" src={logo} alt="">
+			<img class="h-20" src={logo} alt="" />
+			<div>
+				<ul class="space-x-2">
+					<li class="group fill-muted transition-colors hover:text-white hover:underline">
+						<a href="https://www.facebook.com/thebehalism">
+							<Facebook class="mr-1 inline-block align-middle" />
+							<span class="text-lg">Facebook↗</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<Button
 			class=""
@@ -33,13 +44,18 @@
 			Lên đầu trang <ArrowUp />
 		</Button>
 	</div>
-	<div class="text-end px-16 py-8">
-		<span class="opacity-20">
+	<div class="px-16 py-8 text-end">
+		<span class="opacity-15">
 			website by <a class="hover:underline" href="https://github.com/onlyin32bit">@onlyin32bit</a>,
 			<a class="hover:underline" href="https://github.com/onlyin32bit/behalism">source↗</a>
 		</span>
 	</div>
-	<img class="absolute -bottom-2 animate-walk h-28 scale-x-100 animate-bounce" src={cn_mel} alt="Mel Beha" title="Cn Mel Beha" />
+	<img
+		class="animate-walk absolute -bottom-2 h-28 scale-x-100 animate-bounce"
+		src={cn_mel}
+		alt="Mel Beha"
+		title="Cn Mel Beha"
+	/>
 </footer>
 
 <style>
@@ -49,10 +65,17 @@
 			transform: scaleX(-1) translateY(0);
 		}
 		/* bounce almost every 5% */
-		5%, 15%, 25%, 35%, 45% {
+		5%,
+		15%,
+		25%,
+		35%,
+		45% {
 			transform: scaleX(-1) translateY(-10px);
 		}
-		10%, 20%, 30%, 40% {
+		10%,
+		20%,
+		30%,
+		40% {
 			transform: scaleX(-1) translateY(0);
 		}
 		49% {
@@ -63,10 +86,16 @@
 			left: 50%;
 			transform: scaleX(1) translateY(0); /* flip */
 		}
-		55%, 65%, 75%, 85% {
+		55%,
+		65%,
+		75%,
+		85% {
 			transform: scaleX(1) translateY(-10px);
 		}
-		60%, 70%, 80%, 90% {
+		60%,
+		70%,
+		80%,
+		90% {
 			transform: scaleX(1) translateY(0);
 		}
 		95% {
