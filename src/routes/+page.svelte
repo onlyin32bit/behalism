@@ -61,7 +61,7 @@
 
 <section class="relative h-[90vh] overflow-hidden bg-[#C2F3FA]">
 	<img
-		class="absolute top-1/3 -right-16 animate-in duration-1000 slide-in-from-right-30"
+		class="absolute -right-16 bottom-16 animate-in duration-1000 slide-in-from-right-30 lg:top-1/3"
 		src={cloud1}
 		alt=""
 	/>
@@ -76,22 +76,22 @@
 		alt=""
 	/>
 
-	<div class="absolute top-2/5 left-28 space-y-4">
+	<div class="absolute top-1/6 space-y-4 xl:top-2/5 xl:left-28">
 		<img id="logo" class="h-72 select-none" src={logo} alt="" />
-		<div class="flex gap-4 ml-10">
+		<div class="grid gap-4 px-10 lg:flex">
 			<a href="/about">
-				<Button class="text-xl" size="lg">
-					Giới thiệu về dự án
-				</Button>
+				<Button class="w-full text-xl" size="lg">Giới thiệu về dự án</Button>
 			</a>
 			<a href="#feedback">
-				<Button class="text-xl" variant="outline" size="lg">
-					Feedback
-				</Button>
+				<Button class="w-full text-xl" variant="outline" size="lg">Feedback</Button>
 			</a>
 		</div>
 	</div>
-	<img class="absolute bottom-0 left-2/5" src={cn_mel} alt="" />
+	<img
+		class="absolute bottom-0 left-1/12 h-72 md:left-1/6 lg:h-[43vh] lg:left-1/2 xl:left-1/2 xl:h-[50vh]"
+		src={cn_mel}
+		alt=""
+	/>
 </section>
 
 <section class="space-y-4 px-6 md:px-12 lg:px-32 xl:px-64"></section>
@@ -167,13 +167,15 @@
 				>
 					<div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
 						<div class="flex items-center gap-3">
-							<div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 sm:h-10 sm:w-10">
+							<div
+								class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 sm:h-10 sm:w-10"
+							>
 								<span class="text-xs font-semibold text-blue-600 sm:text-sm">
 									{feedback.isAnonymous ? 'A' : feedback.from?.charAt(0)?.toUpperCase() || 'U'}
 								</span>
 							</div>
 							<div class="min-w-0 flex-1">
-								<h3 class="font-semibold text-gray-900 text-sm sm:text-base">
+								<h3 class="text-sm font-semibold text-gray-900 sm:text-base">
 									{feedback.isAnonymous ? 'Ẩn danh' : feedback.from || 'Không tên'}
 								</h3>
 								<p class="text-xs text-gray-500 sm:text-sm">
